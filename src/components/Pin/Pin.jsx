@@ -1,9 +1,14 @@
 import React from 'react'
+import { urlFor } from '../../client'
 
-const Pin = () => {
+const Pin = ({ pin: { postedBy, image, id, destination } }) => {
     return (
         <>
-            Pin
+            <img
+                className="rounded-lg w-full"
+                alt="user-post"
+                src={urlFor(image).width(250).url()}
+            />
         </>
     )
 }

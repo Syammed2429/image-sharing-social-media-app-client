@@ -13,7 +13,7 @@ export const searchQuery = (searchTerm) => {
         },
         _id,
         destination,
-        postedBy -< {
+        postedBy -> {
             _id,
             userName,
             image
@@ -32,25 +32,27 @@ export const searchQuery = (searchTerm) => {
 }
 
 
-export const feedQuery = `*[__type == "pin"] | order(_createdAt desc) {
+export const feedQuery = `*[_type == "pin"] | order(_createdAt desc) {
      image {
-            asset -> {
-                url
+         asset -> {
+             url
             }
         },
         _id,
         destination,
-        postedBy -< {
+        postedBy -> {
             _id,
             userName,
             image
         },
         save[] {
             _key,
-            postedBy -> {
+            postedBy -> { 
                 _id,
                 userName,
                 image
             },
         },
 }`
+
+
