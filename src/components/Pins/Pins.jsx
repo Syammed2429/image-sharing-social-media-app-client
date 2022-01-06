@@ -24,7 +24,6 @@ const Pins = ({ user }) => {
                 </div>
 
             </div>
-            <h1>Pins</h1>
         </>
     )
 }
