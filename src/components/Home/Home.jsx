@@ -7,7 +7,7 @@ import { Sidebar, UserProfile, Login } from '../index';
 import { client } from '../../client';
 import logo from '../../assets/logo.png';
 import { userQuery } from '../../utils/data'
-import { Pins } from '../Pin/Pin';
+import { Pins } from '../Pins/Pins';
 
 
 const Home = () => {
