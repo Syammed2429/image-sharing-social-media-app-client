@@ -15,7 +15,6 @@ const Spinner = ({ message }) => {
                 />
                 <p className="text-lg text-center px-2">{message}</p>
             </div>
-            Spinner
         </>
     )
 }
