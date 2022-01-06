@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { client } from '../../client';
-import { searchQuery } from '../../utils/data';
+import { feedQuery, searchQuery } from '../../utils/data';
 import { MasonryLayout } from '../MasonryLayout/MasonryLayout'
 import { Spinner } from '../Spinner/Spinner'
 
@@ -26,6 +26,11 @@ const Feed = () => {
                 })
 
         } else {
+            client.fetch(feedQuery)
+                .then((data) => {
+                    setPins(data)
+                    setLoading(false)
+                })
 
         }
     }, [categoryId]);
@@ -34,7 +39,7 @@ const Feed = () => {
     if (loading) return <Spinner message="We are adding new ideas to your feed!" />
     return (
         <>
-            Feed
+            {pins && <MasonryLayout pins={pins} />}
         </>
     )
 }
