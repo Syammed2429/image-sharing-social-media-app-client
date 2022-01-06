@@ -1,14 +1,33 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
-import { RiHomeFIll } from 'react-icons/io';
+import { RiHomeFill } from 'react-icons/ri';
 import { IoIosArrowForward } from 'react-icons/io';
 
 import logo from '../../assets/logo.png'
 
 
 const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize'
-const isActiveStyle = 'flex items-center px-5 gap-3 font-extrabold  border-r-2 border-black '
-
+const isActiveStyle = 'flex items-center px-5 gap-3 font-extrabold  border-r-2 border-black transition-all duration-200 ease-in-out capitalize'
+const categories = [
+    {
+        name: 'Animals'
+    },
+    {
+        name: 'Wallapapers'
+    },
+    {
+        name: 'Gaming'
+    },
+    {
+        name: 'Photos'
+    },
+    {
+        name: 'Gaming'
+    },
+    {
+        name: 'Other'
+    },
+]
 
 
 
@@ -27,7 +46,7 @@ const Sidebar = ({ user, closeToggle }) => {
                 <div className="flex flex-col">
                     <Link
                         to="/"
-                        className="flex px-5 gap-2 my-6 pt-1 w-190px items-center"
+                        className="flex px-5 gap-2 my-6 pt-1 w-190 items-center"
                         onClick={handleCloseSideBar}
                     >
                         <img
@@ -40,10 +59,23 @@ const Sidebar = ({ user, closeToggle }) => {
                         <NavLink
                             to="/"
                             className={({ isActive }) => isActive ? isActiveStyle : isNotActiveStyle}
+                            onClick={handleCloseSideBar}
                         >
-
+                            <RiHomeFill />
+                            Home
                         </NavLink>
+                        <h3 className='mt-2 px-5 text-base 2xl:text-xl'>DIcover Categories</h3>
+                        {categories.slice(0, categories.length - 1).map((category) => (
+                            <NavLink
+                                className={({ isActive }) => isActive ? isActiveStyle : isNotActiveStyle}
+                                onClick={handleCloseSideBar}
+                                to={`/category/${category.name}`}
+                                key={category.name}
+                            >
+                                {category.name}
 
+                            </NavLink>
+                        ))}
                     </div>
                 </div>
             </div>
