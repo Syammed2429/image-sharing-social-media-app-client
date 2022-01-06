@@ -22,7 +22,7 @@ const categories = [
         name: 'Photos'
     },
     {
-        name: 'Gaming'
+        name: 'Coding'
     },
     {
         name: 'Other'

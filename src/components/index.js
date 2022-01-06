@@ -1,3 +1,8 @@
 export { Sidebar } from './Sidebar/Sidebar'
 export { Login } from './Login/Login'
+export { Navbar } from './Navbar/Navbar'
+export { Feed } from './Feed/Feed'
+export { PinDetails } from './PinDetails/PinDetails'
+export { CreatePin } from './CreatePin/CreatePin'
+export { Search } from './Search/Search'
 export { UserProfile } from './UserProfile/UserProfile'
