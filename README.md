@@ -10,7 +10,7 @@ A simple web application to upload and download the images
   Sample Desktop Application 👇
 </p>
 
-<p align="center"> Admin Login
+<p align="center"> Demo pic
 <img src="./src/assets/demo.png">
 </p>
 
@@ -36,7 +36,7 @@ This project was built using these technologies.
 - Users can add new images.
 - Users can search for the images.
 - Users can download the images.
-- User can see there uploaded images.
+- User can see the uploaded images.
 - User can see there saved images.
 - Masonry Image Effect.
 - Google Auth.
