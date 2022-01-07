@@ -7,7 +7,7 @@ const Spinner = ({ message }) => {
         <>
             <div className="flex flex-col justify-center items-center w-full h-full">
                 <Loader
-                    type="Rings"
+                    type="Circles"
                     color="#00BFFF"
                     height={50}
                     width={200}
