@@ -98,7 +98,7 @@ const CreatePin = ({ user }) => {
                             {!imageAsset ? (
                                 // eslint-disable-next-line jsx-a11y/label-has-associated-control
                                 <label>
-                                    <div className="flex flex-col items-center justify-center h-full">
+                                    <div className="flex flex-col items-center justify-center h-full cursor-pointer">
                                         <div className="flex flex-col justify-center items-center">
                                             <p className="font-bold text-2xl">
                                                 <AiOutlineCloudUpload />
