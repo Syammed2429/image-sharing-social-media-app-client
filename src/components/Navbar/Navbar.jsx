@@ -48,7 +48,6 @@ const Navbar = ({ searchTerm, setSearchTerm, user }) => {
 
                 </div>
 
-                <h1>Navbar</h1>
             </div>
 
         </>
