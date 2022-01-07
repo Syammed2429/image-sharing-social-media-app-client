@@ -1,9 +1,9 @@
-# Basic Landing Page
+# Image Sharing Platform Share Me
 
-A simple web application for student management system.
+A simple web application to upload and download the images
 
 <h2 align="center">
-  <a href="https://student-management-system-eight.vercel.app/login" target="_blank">Student Management System</a>
+  <a href="ninie-image-gallery.vercel.app" target="_blank">Image Share Me</a>
 </h2>
 
 <p align="center">
@@ -11,27 +11,7 @@ A simple web application for student management system.
 </p>
 
 <p align="center"> Admin Login
-<img src="./src/assests/images/admin-signin.png">
-</p>
-
-<p align="center"> Admin Panel
-<img src="./src/assests/images/admin-panel.png">
-</p>
-
-<p align="center"> Contests
-<img src="./src/assests/images/contests.png">
-</p>
-
-<p align="center"> DSA Contest Filter
-<img src="./src/assests/images/dsa-sort.png">
-</p>
-
-<p align="center"> Coding Contest Filter
-<img src="./src/assests/images/coding-sort.png">
-</p>
-
-<p align="center"> 404 Error Page
-<img src="./src/assests/images/404.png">
+<img src="./src/assets/demo.png">
 </p>
 
 ## Built With
@@ -39,23 +19,23 @@ A simple web application for student management system.
 This project was built using these technologies.
 
 - React
-- TypeScript
-- Chakra UI
+- Tailwind
+- React Router Dom
+- Google Auth
+- Sanity
 - React Router Dom
 - Deployed on Vercel
 
 ## Features are:
 
-- Navbar.
-- 404 Error Page.
-- Not allowed to add duplicate student names
-- Not allowed to add duplicate contest names
-- Authentication
-- Admin Panel
-- Contests filtering
-- Pagination
-
-<a link="https://github.com/kerrybli/student-management-system-server">BackEnd (Server) Link </a>
+- Sidebar.
+- Users can add new images.
+- Users can save the new images.
+- Users can comment on each and every user post.
+- User can delete there uploaded images.
+- Users can add new images.
+- Users can search for the images.
+- Users can download the images.
 
 ### 🛠 Installation and Setup Instructions
 
