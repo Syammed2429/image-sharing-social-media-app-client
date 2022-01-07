@@ -36,10 +36,15 @@ This project was built using these technologies.
 - Users can add new images.
 - Users can search for the images.
 - Users can download the images.
+- User can see there uploaded images.
+- User can see there saved images.
+- Masonry Image Effect.
+- Google Auth.
+- Image Categories.
 
 ### 🛠 Installation and Setup Instructions
 
-To get started just clone this repository. You will need `node.js` and `git` installed globally on your machine.
+To get started just clone this repository. You will need `node.js`, `sanity` and `git` installed globally on your machine.
 
 Run
 
