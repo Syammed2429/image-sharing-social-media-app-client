@@ -9,6 +9,7 @@ import logo from '../../assets/logo.png';
 import { userQuery } from '../../utils/data'
 import { Pins } from '../Pins/Pins';
 import { fetchUser } from '../../utils/fetchUser';
+import { Footer } from '../Footer/Footer';
 
 
 const Home = () => {
@@ -92,6 +93,7 @@ const Home = () => {
                         <Route path="/user-profile/:userId" element={<UserProfile />} />
                         <Route path="/*" element={<Pins user={user && user} />} />
                     </Routes>
+                    {/* <Footer /> */}
                 </div>
 
             </div>

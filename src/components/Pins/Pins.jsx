@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Footer } from '../Footer/Footer';
 import { Navbar, Feed, CreatePin, PinDetails, Search } from '../index'
 
 
@@ -24,6 +25,7 @@ const Pins = ({ user }) => {
                 </div>
 
             </div>
+            <Footer />
         </>
     )
 }

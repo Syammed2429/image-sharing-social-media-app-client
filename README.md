@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Basic Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple web application for student management system.
 
-## Available Scripts
+<h2 align="center">
+  <a href="https://student-management-system-eight.vercel.app/login" target="_blank">Student Management System</a>
+</h2>
 
-In the project directory, you can run:
+<p align="center">
+  Sample Desktop Application 👇
+</p>
 
-### `npm start`
+<p align="center"> Admin Login
+<img src="./src/assests/images/admin-signin.png">
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center"> Admin Panel
+<img src="./src/assests/images/admin-panel.png">
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p align="center"> Contests
+<img src="./src/assests/images/contests.png">
+</p>
 
-### `npm test`
+<p align="center"> DSA Contest Filter
+<img src="./src/assests/images/dsa-sort.png">
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center"> Coding Contest Filter
+<img src="./src/assests/images/coding-sort.png">
+</p>
 
-### `npm run build`
+<p align="center"> 404 Error Page
+<img src="./src/assests/images/404.png">
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was built using these technologies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- TypeScript
+- Chakra UI
+- React Router Dom
+- Deployed on Vercel
 
-### `npm run eject`
+## Features are:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Navbar.
+- 404 Error Page.
+- Not allowed to add duplicate student names
+- Not allowed to add duplicate contest names
+- Authentication
+- Admin Panel
+- Contests filtering
+- Pagination
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a link="https://github.com/kerrybli/student-management-system-server">BackEnd (Server) Link </a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🛠 Installation and Setup Instructions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To get started just clone this repository. You will need `node.js` and `git` installed globally on your machine.
 
-## Learn More
+Run
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm start
+```
 
-### Code Splitting
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Show your support
 
-### Analyzing the Bundle Size
+📌 Please feel free to contribute to this project with your commits, and share this with your friends if you like this projects.😁 😃
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Give a ⭐ if you like this website! Fork it and contribute
 
-### Making a Progressive Web App
+# Can I contribute?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to open a PR and I appreciate it.
