@@ -36,9 +36,9 @@ const Feed = () => {
     }, [categoryId]);
 
 
-    if (loading) return <Spinner message="We are adding new ideas to your feed!" />
+    if (loading) return <Spinner message={`We are fetching ${categoryId} images for you!`} />
 
-    if (!pins?.length) return <h2>No Images are available for this category</h2>
+    if (!pins?.length) return <h2 className='flex justify-center items-center'>No Images are available for <span className='font-bold mx-2'>{categoryId}</span> category  </h2>
 
     return (
         <>
