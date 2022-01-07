@@ -25,7 +25,10 @@ const Pins = ({ user }) => {
                 </div>
 
             </div>
-            <Footer />
+            <div className='translate-y-[17rem]'>
+
+                <Footer />
+            </div>
         </>
     )
 }
