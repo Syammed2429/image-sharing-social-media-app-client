@@ -9,6 +9,7 @@ import { userCreatedPinsQuery, userQuery, userSavedPinsQuery } from '../../utils
 import { client } from '../../client';
 import { MasonryLayout } from '../MasonryLayout/MasonryLayout';
 import { Spinner } from '../Spinner/Spinner';
+import { fetchUser } from '../../utils/fetchUser';
 
 const activeBtnStyles = 'bg-red-500 text-white font-bold p-2 rounded-full w-20 outline-none';
 const notActiveBtnStyles = 'bg-primary mr-4 text-black font-bold p-2 rounded-full w-20 outline-none';
@@ -24,7 +25,7 @@ const UserProfile = () => {
     const navigate = useNavigate();
     const { userId } = useParams();
 
-    const User = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+    const User = fetchUser()
 
     useEffect(() => {
         const query = userQuery(userId);
@@ -50,7 +51,7 @@ const UserProfile = () => {
     }, [text, userId]);
 
     const logout = () => {
-        localStorage.clear();
+        sessionStorage.clear();
 
         navigate('/login');
     };
