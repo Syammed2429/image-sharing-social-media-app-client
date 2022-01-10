@@ -6,7 +6,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { Sidebar, UserProfile } from '../index';
 import { client } from '../../client';
 import logo from '../../assets/logo.png';
-import { userQuery } from '../../utils/data'
+import { userQuery, userCreatedPinsQuery } from '../../utils/data'
 import { Pins } from '../Pins/Pins';
 import { fetchUser } from '../../utils/fetchUser';
 
@@ -14,12 +14,17 @@ import { fetchUser } from '../../utils/fetchUser';
 const Home = () => {
     const [toggleSidebar, setToggleSidebar] = useState(false)
     const [user, setUser] = useState(null)
+    const [userId, setUserId] = useState(null)
+    const [userCreatedPins, setUserCreatedPins] = useState(null)
+    const [pinsLength, setPinsLength] = useState(false)
     const scrollRef = useRef(null)
 
 
     const userInfo = fetchUser()
 
     useEffect(() => {
+        setUserId(userInfo.googleId)
+
         const query = userQuery(userInfo?.googleId);
 
         client.fetch(query)
@@ -32,6 +37,33 @@ const Home = () => {
     useEffect(() => {
         scrollRef.current.scrollTo(0, 0)
     })
+
+
+    // useEffect(() => {
+
+
+    //     const createdPinsQuery = userCreatedPinsQuery(userId);
+
+    //     client.fetch(createdPinsQuery).then((data) => {
+    //         const id = setUserCreatedPins(data)
+    //         setTimeout(() => {
+    //             if (userCreatedPins.length === 0) return console.log("No pins")
+
+    //         }, 3000)
+
+    //         clearTimeout(id )
+    //     });
+    //     console.log('userCreatedPins:', userCreatedPins)
+    //     // console.log('userCreatedPins:', userCreatedPins)
+    //     // setTimeout(() => {
+    //     //     if (userCreatedPins) {
+    //     //         return alert("No pins")
+    //     //     }
+
+    //     // }, 3000)
+    // }, [userCreatedPins, userId])
+
+
 
 
     return (

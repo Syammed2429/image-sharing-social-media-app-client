@@ -5,7 +5,7 @@ import { AiOutlineLogout } from 'react-icons/ai';
 import { useParams, useNavigate } from 'react-router-dom';
 import { GoogleLogout } from 'react-google-login';
 
-import { userCreatedPinsQuery, userQuery, userSavedPinsQuery } from '../../utils/data';
+import { userCreatedPinsQuery, userQuery, userSavedPinsQuery, pinDetailMorePinQuery, pinDetailQuery } from '../../utils/data';
 import { client } from '../../client';
 import { MasonryLayout } from '../MasonryLayout/MasonryLayout';
 import { Spinner } from '../Spinner/Spinner';
@@ -23,6 +23,9 @@ const UserProfile = () => {
     const [text, setText] = useState('Created');
     const [activeBtn, setActiveBtn] = useState('created');
     const navigate = useNavigate();
+    const [pinDetail, setPinDetail] = useState();
+    const [pinId, setPinId] = useState('')
+
     const { userId } = useParams();
 
     const User = fetchUser()
@@ -40,6 +43,9 @@ const UserProfile = () => {
 
             client.fetch(createdPinsQuery).then((data) => {
                 setPins(data);
+                data.map((e) => (
+                    setPinId(e._id)
+                ))
             });
         } else {
             const savedPinsQuery = userSavedPinsQuery(userId);
@@ -49,6 +55,43 @@ const UserProfile = () => {
             });
         }
     }, [text, userId]);
+
+
+    //Fecth All COmments
+    const fetchPinDetails = () => {
+        // console.log('data:', pins)
+        // pins.filter((e) => (
+        //     console.log(e._id)
+
+        // ))
+        const query = pinDetailQuery(pinId);
+
+        if (query) {
+            client.fetch(`${query}`).then((data) => {
+                // console.log('data for comment:', data[0])
+                setPinDetail(data[0].comments);
+                if (data[0]) {
+                    const query1 = pinDetailMorePinQuery(data[0]);
+                    client.fetch(query1).then((res) => {
+                        // setPins(res);
+                    });
+                }
+            });
+        }
+    };
+
+    useEffect(() => {
+        fetchPinDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pinId]);
+
+
+
+
+
+
+
+
 
     const logout = () => {
         sessionStorage.clear();
@@ -60,6 +103,9 @@ const UserProfile = () => {
 
     return (
         <>
+            {/* {pinDetail.map((e) => (
+                console.log(e)
+            ))} */}
             <div className="relative pb-2 h-full justify-center items-center">
                 <div className="flex flex-col pb-5">
                     <div className="relative flex flex-col mb-7">
