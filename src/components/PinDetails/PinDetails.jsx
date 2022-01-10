@@ -22,7 +22,6 @@ const PinDetails = ({ user }) => {
         if (query) {
             client.fetch(`${query}`).then((data) => {
                 setPinDetail(data[0]);
-                console.log(data);
                 if (data[0]) {
                     const query1 = pinDetailMorePinQuery(data[0]);
                     client.fetch(query1).then((res) => {
@@ -35,6 +34,7 @@ const PinDetails = ({ user }) => {
 
     useEffect(() => {
         fetchPinDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pinId]);
 
     const addComment = () => {
@@ -128,7 +128,7 @@ const PinDetails = ({ user }) => {
                                 className="bg-red-500 text-white rounded-full px-6 py-2 font-semibold text-base outline-none"
                                 onClick={addComment}
                             >
-                                {addingComment ? 'Posting the comment ....' : 'Post'}
+                                {addingComment ? 'Commenting ....' : 'Comment'}
 
                             </button>
                         </div>
