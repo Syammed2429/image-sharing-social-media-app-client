@@ -11,8 +11,8 @@ A simple web application to upload and download the images
 </p>
 
 <p align="center"> Demo pic
-<!-- <img src="./src/assets/demo.png"> -->
-![image](https://github.com/user-attachments/assets/baa5e21b-ef12-4c64-b115-9550de054d9e)
+<img src="./src/assets/demo.png">
+<!-- ![image](https://github.com/user-attachments/assets/baa5e21b-ef12-4c64-b115-9550de054d9e) -->
 
 
 </p>
